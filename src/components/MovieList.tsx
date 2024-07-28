@@ -16,7 +16,7 @@ const MovieCard = styled(animated.li)`
   margin: 20px 0;
 `;
 
-const MovieTitle = styled.a`
+const MovieTitle = styled.strong`
   color: #cd853f; /* パーシモン */
   font-size: 1.2em;
   text-decoration: none;
@@ -162,7 +162,7 @@ const MovieList: React.FC<{ movies: Movie[] }> = ({ movies }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {moviesList[index].title}
+              {moviesList[index].title}{moviesList[index].emoji}
             </MovieTitle>
             <MovieDescription>{moviesList[index].description}</MovieDescription>
 
